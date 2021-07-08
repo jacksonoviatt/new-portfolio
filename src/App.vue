@@ -4,20 +4,21 @@
 
 
 <social-buttons></social-buttons>
-   <mobile-menu></mobile-menu>
-   <nav-menu></nav-menu>
-    <welcome-container></welcome-container>
-
+<mobile-menu></mobile-menu>
+<nav-menu></nav-menu>
+<welcome-container></welcome-container>
+<projects-page></projects-page>
   </div>
 </template>
 <script>
 import MobileMenu from './components/MobileMenu.vue';
 import NavMenu from './components/NavMenu.vue';
+import ProjectsPage from './components/ProjectsPage.vue';
 import SocialButtons from './components/SocialButtons.vue';
 import WelcomeContainer from "./components/WelcomeContainer.vue";
 
 export default {
-  components: { WelcomeContainer, SocialButtons, MobileMenu, NavMenu },
+  components: { WelcomeContainer, SocialButtons, MobileMenu, NavMenu, ProjectsPage },
 };
 </script>
 
@@ -33,6 +34,9 @@ svg {
   top: 0;
   left: 0;
   right: 0;
+}
+h1, h2, h3 {
+  font-weight: 200;
 }
 @media screen and (min-width: 750){
   svg {
