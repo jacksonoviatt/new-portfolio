@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="mobileNav">
     <section id="fafaBars" @click="openMenu()" v-if="isMenuOpen === false">
       <div></div>
       <div></div>
@@ -53,73 +53,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 900px) {
+   div {
+    background: red;
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+
   #fafaBars {
     position: fixed;
-    top: 20px;
+    top: 15px;
     right: 20px;
     z-index: 6;
     display: grid;
     gap: 10px;
     div {
-      text-shadow: #ffffff 2px 2px 0px, #ffffff -2px 2px 0px,
-        #ffffff 2px -2px 0px, #ffffff -2px -2px 0px;
+      box-shadow: #3A5B7E 1px 1px 1px, #3A5B7E -1px 1px 1px,
+        #3A5B7E 1px -1px 1px, #3A5B7E -1px -1px 1px;
       width: 25px;
       height: 2px;
-      background: #648cb7;
-    }
-  }
-
-  #mobileMenu {
-    padding: 25px 0px;
-    width: 90px;
-    height: auto;
-    background: #B0C5DB;
-    position: absolute;
-    right: 0;
-    top: -300px;
-    transition: 0.5s all ease;
-    //   text-align: right;
-  }
-  #xBars {
-    display: grid;
-    place-items: center;
-
-    div {
-      width: 20px;
-      height: 2px;
       background: #ffffffcc;
+    }
+  }
+    #mobileMenu {
+      padding: 25px 0px;
+      width: 90px;
+      height: auto;
+      background: #b0c5db;
       position: absolute;
-      top: 15px;
-      right: 65px;
-    //   box-shadow: #B0C5DB 2px 2px 2px;
+      right: 0;
+      top: -300px;
+      transition: 0.5s all ease;
+      //   text-align: right;
     }
-    #barOne {
-      transform: rotate(135deg);
-    }
-    #barTwo {
-      transform: rotate(45deg);
+    #xBars {
+      display: grid;
+      place-items: center;
 
-      // margin-bottom: -20px;
-    }
-  }
+      div {
+        width: 20px;
+        height: 2px;
+        background: #ffffffcc;
+        position: absolute;
+        top: 15px;
+        right: 65px;
+        //   box-shadow: #B0C5DB 2px 2px 2px;
+      }
+      #barOne {
+        transform: rotate(135deg);
+      }
+      #barTwo {
+        transform: rotate(45deg);
 
-  nav {
-    display: grid;
-    div{
+        // margin-bottom: -20px;
+      }
+    }
+
+    nav {
+      display: grid;
+      div {
         height: auto;
-    margin: 10px 00px;
-    width: 100%;
-    // }
-    // div:hover {
-    background: #B0C5DB;
+        margin: 10px 00px;
+        width: 100%;
+        // }
+        // div:hover {
+        background: #b0c5db;
+      }
+      a {
+        margin: 0px 20px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #ffffff;
+      }
     }
-    a {
-    margin: 0px 20px;
-      text-decoration: none;
-      font-size: 12px;
-      color: #ffffff;
-    }
-  }
+  
 }
 </style>
