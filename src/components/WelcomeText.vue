@@ -17,7 +17,7 @@ div {
 
     display: grid;
     place-items: center;
-    margin: 15%;
+    margin: 30px 15%;
     row-gap: 30px;
     p {
         line-height: 25px;

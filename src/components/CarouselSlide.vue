@@ -1,34 +1,41 @@
 <template>
-  <div class="projectDiv">
-    <h3 @click="check">{{ name }}</h3>
-    <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
-    <div class="links">
-      <a :href="liveLink">Go to site</a> |
-      <a :href="codeLink">View code</a>
+  <div class="projectSlide">
+    <div class="opener" @click="openSlide()">
+      <h3 >{{ name }}  <img v-if="slideOpen === false" src="../assets/plus.png" alt=""><img class="remove" v-if="slideOpen === true" src="../assets/remove.png" alt=""></h3>
+      
     </div>
-    <div class="line"></div>
-    <div class="langDes">
-      <p>{{ languages }}</p>
-      <p>{{ description }}</p>
+    <div v-if="slideOpen === true" class="slideInfo">
+      <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
+      <div class="links">
+        <a :href="liveLink">Go to site</a> |
+        <a :href="codeLink">View code</a>
+      </div>
+      <div class="line"></div>
+      <div class="langDes">
+        <p>{{ languages }}</p>
+        <p>{{ description }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-    name:
-    "carousel-slide",
+  name: "carousel-slide",
   data() {
     return {
       imgAlt: `a screen grab from ${this.name}`,
       imageSrc: this.image,
+      slideOpen: false
     };
   },
   methods: {
     check() {
       console.log(this.image);
     },
+    openSlide() {
+      this.slideOpen = !this.slideOpen;
+    }
   },
   props: {
     name: String,
@@ -42,44 +49,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .langDes {
-//   height: 200px;
-// }
-// h3 {
-//   padding-top: 15px;
-// }
-// .projectDiv {
-//   width: 300px;
-//   height: 560px;
-//   border: 2px solid #91a666;
-//   display: grid;
-//   place-items: center;
-// }
-// .projectImg {
-//   width: 80%;
-//   min-height: 136.83px;
-//   margin: 10%;
-//   margin-bottom: 15%;
-//   box-shadow: #93b5c6 2px 2px 2px;
-// }
-// .links {
-//   a {
-//     color: #faa6b2;
-//     font-weight: bold;
-//   }
-// }
-// .line {
-//   width: 100%;
-//   height: 1px;
-//   margin: 30px 0;
-//   background: #91a666;
-// }
-// p {
-//   font-size: 14px;
-//   // height: 150px;
-//   padding: 15px;
-//   padding-top: 0;
-//   text-align: center;
-// }
+h3 {
+  font-weight: 400;
+}
+.remove {
+  margin-left: 10px;
+}
+.projectSlide {
+  display: grid;
+
+}
+
+.opener {
+  display: grid;
+  place-items: center;
+  img {
+    width: 10px;
+  }
+  // grid-template-columns: 10fr 1fr;
+  height: 40px;
+}
+.slideInfo {
+  display: grid;
+  place-items: center;
+  img {
+    box-shadow: grey 0px 4px 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease-in all;
+  width: 60vw;
+}
+ 
+  .langDes
+  {
+    place-items: center;
+    display: grid;
+    margin: 8px 0px;
+    width: 50vw;
+    p {
+      margin: 5px;
+    }
+  }
+  .links {
+    margin: 8px 0px;
+  }
+}
 
 </style>

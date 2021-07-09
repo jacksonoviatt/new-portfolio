@@ -8,17 +8,19 @@
 <nav-menu></nav-menu>
 <welcome-container></welcome-container>
 <projects-page></projects-page>
+<skills-page></skills-page>
   </div>
 </template>
 <script>
 import MobileMenu from './components/MobileMenu.vue';
 import NavMenu from './components/NavMenu.vue';
 import ProjectsPage from './components/ProjectsPage.vue';
+import SkillsPage from './components/SkillsPage.vue';
 import SocialButtons from './components/SocialButtons.vue';
 import WelcomeContainer from "./components/WelcomeContainer.vue";
 
 export default {
-  components: { WelcomeContainer, SocialButtons, MobileMenu, NavMenu, ProjectsPage },
+  components: { WelcomeContainer, SocialButtons, MobileMenu, NavMenu, ProjectsPage, SkillsPage },
 };
 </script>
 

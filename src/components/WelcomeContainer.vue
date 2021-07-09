@@ -76,7 +76,7 @@ h3 {
   }
 }
 .helloImgs {
-  margin: 30px 0;
+
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;

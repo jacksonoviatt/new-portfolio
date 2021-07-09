@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>CAROUSEL</h1>
+  <div id="projectCarousel">
+    <!-- <h1>CAROUSEL</h1> -->
     <div class="carousel" v-for="object in storeProjectArray" :key="object.string">
         <carousel-slide
             :name="object.name"
@@ -31,4 +31,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#projectCarousel {
+  display: grid;
+  place-items: center;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // white-space: nowrap;
+
+}
+.carousel {
+  // place-items: center;
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // width: 400px;
+}
+// @media screen and (min-width: 750px) {
+//   #projectCarousel {
+//   width: 300vw;
+//   overflow-x: auto;
+//   overflow-y: hidden;
+//   grid-template-columns: 1fr 1fr 1fr;
+  
+//   }
+// }
 </style>
