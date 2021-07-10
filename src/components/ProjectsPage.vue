@@ -18,15 +18,13 @@ export default {
 
 <style lang="scss" scoped>
 section {
+  
   display: grid;
   place-items: center;
 }
-.line {
-  width: 150px;
-  height: 2px;
-  background: #EF8A9E;
-  margin-bottom: 20px;
-  margin-top: 2px;
+h2 {
+  margin-top: 90px;
 }
+
 
 </style>

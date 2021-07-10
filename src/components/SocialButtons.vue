@@ -2,11 +2,12 @@
   <div id="socialButtons">
     <!-- <div class="socialButton" @click="showLink('twitter')">
       
-    </div> --> 
+    </div> -->
     <div class="socialButton">
       <a
         href="https://docs.google.com/document/d/1dc7_Jw78AP2YTyyirLJsgrKveBM4BeONyKJmgt8TxEw/edit"
-        target="_blank"><img src="../assets/file.png" alt="Resume Logo"
+        target="_blank"
+        ><img src="../assets/file.png" alt="Resume Logo"
       /></a>
     </div>
     <div class="socialButton">
@@ -14,10 +15,10 @@
         ><img src="../assets/twitterlogo.svg" alt="Twitter Logo" id="twitter" />
       </a>
     </div>
-   
+
     <div class="socialButton">
-      <a href="https://www.linkedin.com/in/ramona-oviatt/"
-        target="_blank"><img src="../assets/LI-In-Bug.png" alt="LinkedIn Logo"
+      <a href="https://www.linkedin.com/in/ramona-oviatt/" target="_blank"
+        ><img src="../assets/LI-In-Bug.png" alt="LinkedIn Logo"
       /></a>
     </div>
 
@@ -43,9 +44,10 @@ export default {
 //     display: none;
 // }
 // @media screen and (min-width: 1000px) {
+
 #socialButtons {
   position: fixed;
-  top: 30px;
+  top: 40px;
   left: 10px;
   width: 30px;
   gap: 10px;
@@ -54,6 +56,7 @@ export default {
   align-items: center;
   justify-items: left;
   column-gap: 0;
+  z-index: 10;
   :nth-child(3) {
     margin-left: 2px;
     width: 32px;
@@ -88,5 +91,11 @@ export default {
   //   box-shadow: red 2px 2px 2px;
   // }
 }
+@media screen and (min-width: 700px) {
+  #socialButtons {
+    top: 90px;
+  }
+}
+
 // }
 </style>

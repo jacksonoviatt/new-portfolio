@@ -50,14 +50,14 @@ export default {
 
 <style lang="scss" scoped>
 h3 {
-  font-weight: 400;
+  font-weight: 200;
 }
 .remove {
   margin-left: 10px;
 }
 .projectSlide {
   display: grid;
-
+  margin-bottom: 20px;
 }
 
 .opener {

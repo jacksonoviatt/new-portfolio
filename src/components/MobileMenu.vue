@@ -1,6 +1,6 @@
 <template>
   <div id="mobileNav">
-    <section id="fafaBars" @click="openMenu()" v-if="isMenuOpen === false">
+    <!-- <section id="fafaBars" @click="openMenu()" v-if="isMenuOpen === false">
       <div></div>
       <div></div>
       <div></div>
@@ -18,13 +18,13 @@
           <a href="#">Projects</a>
         </div>
         <div>
-          <a href="#">Skills</a>
+          <a href="#">My Skills</a>
         </div>
         <div>
           <a href="#">Contact</a>
         </div>
       </nav>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -55,7 +55,6 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 900px) {
    div {
-    background: red;
     display: none;
   }
 }
@@ -69,11 +68,11 @@ export default {
     display: grid;
     gap: 10px;
     div {
-      box-shadow: #3A5B7E 1px 1px 1px, #3A5B7E -1px 1px 1px,
-        #3A5B7E 1px -1px 1px, #3A5B7E -1px -1px 1px;
+      // box-shadow: #3A5B7E22 1px 1px 1px, #3A5B7E22 -1px 1px 1px,
+      //   #3A5B7E22 1px -1px 1px, #3A5B7E22 -1px -1px 1px;
       width: 25px;
       height: 2px;
-      background: #ffffffcc;
+      background: #b0c5db;
     }
   }
     #mobileMenu {

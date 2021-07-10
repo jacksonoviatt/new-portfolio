@@ -11,6 +11,7 @@
       </div>
 
       <welcome-text></welcome-text>
+      <img class="techPets" src="../assets/techpets.jpeg" alt="Ramona's dog and cat sitting in front of computer">
     </div>
   </div>
 </template>
@@ -43,13 +44,10 @@ export default {
 .hello {
   display: grid;
   place-items: center;
-  margin-top: 90px;
+  margin-top: 110px;
 }
 
-h2,
-h3 {
-  font-weight: 300;
-}
+
 @media screen and (min-width: 320px) {
   .helloImgs {
     width: 70%;
@@ -81,5 +79,13 @@ h3 {
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100px;
+}
+@media screen and (min-width: 500px) {
+  #welcome {
+    margin-top: 130px;
+  }
+}
+.techPets {
+  width: 60%;
 }
 </style>
