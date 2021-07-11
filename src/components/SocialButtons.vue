@@ -47,7 +47,7 @@ export default {
 
 #socialButtons {
   position: fixed;
-  top: 40px;
+  top: 55px;
   left: 10px;
   width: 30px;
   gap: 10px;

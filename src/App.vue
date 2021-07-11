@@ -6,13 +6,13 @@
         <div></div>
         <div></div>
       </section>
-      <section id="mobileMenu">
+     <header> <section id="mobileMenu">
         <section id="xBars" @click="closeMenu()">
           <div id="barOne"></div>
           <div id="barTwo"></div>
         </section>
         <nav>
-          <header></header>
+          
 
             <a href="#">Welcome</a>
      
@@ -25,8 +25,9 @@
           <div class="logoImg">
             <img src="./assets/ramonalogo.svg" alt="a cartoon logo of Ramona" />
           </div>
+          
         </nav>
-      </section>
+      </section></header>
     </div>
     <social-buttons></social-buttons>
     <nav-menu></nav-menu>
@@ -107,7 +108,16 @@ a {
 html {
   scroll-behavior: smooth;
 }
-
+header {
+    background: #7599C088;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    display: grid;
+    height: 50px;
+    z-index: 5;
+    width: 100%;
+  }
 @media screen and (min-width: 700px) {
   header {
     background: #7599C088;
@@ -116,7 +126,7 @@ html {
     top: 0px;
     display: grid;
     height: 80px;
-    z-index: -5;
+    z-index: 5;
     width: 100%;
   }
   nav {
@@ -149,7 +159,7 @@ html {
   #mobileNav {
     #fafaBars {
       position: fixed;
-      top: 15px;
+      top: 12px;
       right: 20px;
       // height: 100px;
       z-index: 6;
@@ -160,7 +170,7 @@ html {
         //   #3A5B7E22 1px -1px 1px, #3A5B7E22 -1px -1px 1px;
         width: 25px;
         height: 2px;
-        background: #b0c5db;
+        background: #ffffff;
       }
       
     }
@@ -171,6 +181,7 @@ html {
       gap: 15px;
     }
     #mobileMenu {
+      
       .logoImg {
         display: grid;
         place-items: center;
@@ -179,6 +190,7 @@ html {
           margin-bottom: 10px;
         }
       }
+     
       padding: 30px 0px 10px;
       width: 100px;
       height: 200px;
@@ -187,6 +199,7 @@ html {
       right: 0;
       top: -300px;
       transition: 0.5s all ease;
+      
       a {
         margin: 0px 20px;
         text-decoration: none;

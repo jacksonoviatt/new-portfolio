@@ -2,7 +2,7 @@
   <section>
     <h2>Contact me</h2>
     <div class="line"></div>
-    <img class="dog" src="../assets/dog.jpg" alt="Ramona and their dog">
+    <img class="dog" src="../assets/headshot.jpeg" alt="Ramona profile photo">
     <p class="contactMessage">
         I would love to get in touch with you to discuss business or just to be
         friendly.
@@ -69,7 +69,8 @@ export default {
 
 <style lang="scss" scoped>
 section {
-    
+    text-align: center;
+    margin: 0 30px;
   display: grid;
   place-items: center;
 }
@@ -81,7 +82,7 @@ section {
 }
 .contactMessage{
         font-size: 18px;
-        margin: 10px;
+        margin: 20px;
     }
 img {
   width: 50px;

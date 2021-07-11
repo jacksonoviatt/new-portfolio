@@ -1,19 +1,30 @@
 <template>
   <div class="projectSlide">
     <div class="opener" @click="openSlide()">
-      <h3 >{{ name }}  <img v-if="slideOpen === false" src="../assets/plus.png" alt=""><img class="remove" v-if="slideOpen === true" src="../assets/remove.png" alt=""></h3>
-      
+      <h3>
+        {{ name }}
+        <img v-if="slideOpen === false" src="../assets/plus.png" alt="" /><img
+          class="remove"
+          v-if="slideOpen === true"
+          src="../assets/remove.png"
+          alt=""
+        />
+      </h3>
     </div>
     <div v-if="slideOpen === true" class="slideInfo">
-      <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
-      <div class="links">
-        <a :href="liveLink">Go to site</a> |
-        <a :href="codeLink">View code</a>
+      <div>
+        <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
+        <!-- <div></div> -->
+        <div class="links">
+          <a :href="liveLink">Go to site</a> |
+          <a :href="codeLink">View code</a>
+        </div>
       </div>
-      <div class="line"></div>
-      <div class="langDes">
-        <p>{{ languages }}</p>
-        <p>{{ description }}</p>
+      <div class="desktopFormat">
+        <div class="langDes">
+          <p>{{ languages }}</p>
+          <p>{{ description }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -26,7 +37,7 @@ export default {
     return {
       imgAlt: `a screen grab from ${this.name}`,
       imageSrc: this.image,
-      slideOpen: false
+      slideOpen: false,
     };
   },
   methods: {
@@ -35,7 +46,7 @@ export default {
     },
     openSlide() {
       this.slideOpen = !this.slideOpen;
-    }
+    },
   },
   props: {
     name: String,
@@ -50,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 h3 {
-  font-weight: 200;
+  font-weight: 300;
 }
 .remove {
   margin-left: 10px;
@@ -59,7 +70,10 @@ h3 {
   display: grid;
   margin-bottom: 20px;
 }
-
+.desktopFormat {
+  display: grid;
+  place-items: center;
+}
 .opener {
   display: grid;
   place-items: center;
@@ -72,15 +86,16 @@ h3 {
 .slideInfo {
   display: grid;
   place-items: center;
+  box-shadow: #00000044 0px 15px 32px;
+  padding: 10px;
   img {
-    box-shadow: grey 0px 4px 10px;
+    // box-shadow: grey 0px 4px 10px;
     margin-bottom: 10px;
     transition: 0.5s ease-in all;
-  width: 60vw;
-}
- 
-  .langDes
-  {
+    width: 60vw;
+  }
+
+  .langDes {
     place-items: center;
     display: grid;
     margin: 8px 0px;
@@ -93,5 +108,30 @@ h3 {
     margin: 8px 0px;
   }
 }
-
+@media screen and (min-width: 900px) {
+  .slideInfo {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    // margin: 0 5vw;
+    > div {
+      padding: 30px;
+      display: grid;
+      place-items: center;
+    }
+    .langDes {
+      width: 30vw;
+    }
+    img {
+      box-shadow: grey 0px 4px 10px;
+      margin-bottom: 10px;
+      transition: 0.5s ease-in all;
+      width: 30vw;
+    }
+  }
+  h3 {
+    font-size: 22px;
+  }
+}
 </style>
