@@ -7,7 +7,7 @@
       <div class="skillType">
         <div v-for="object in object.tech" :key="object.id" class="skill">
           <div class="skillBox">
-            <img class="skillLogo" :src="object.logo" alt="" />
+            <img class="skillLogo" :src="object.logo" :alt="object.name + ' Logo'" />
           </div>
           <p>{{ object.name }}</p>
         </div>
@@ -35,6 +35,7 @@ export default {
 #skills {
   margin: 30px;
   width: 70%;
+ 
 }
 .skillBox {
   width: 50px;

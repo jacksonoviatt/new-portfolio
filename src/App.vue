@@ -30,37 +30,39 @@
       </section></header>
     </div>
     <social-buttons></social-buttons>
-    <nav-menu></nav-menu>
+
     <welcome-container id="welcome-page"></welcome-container>
     <projects-page id="projects-page"></projects-page>
     <skills-page id="skills-page"></skills-page>
     <contact-page id="contact-page"></contact-page>
-    <bottom-footer></bottom-footer>
+  <page-footer></page-footer>
   </div>
 </template>
 <script>
 import ContactPage from './components/ContactPage.vue';
 // import MobileMenu from "./components/MobileMenu.vue";
-import NavMenu from "./components/NavMenu.vue";
+
+import PageFooter from './components/PageFooter.vue';
 import ProjectsPage from "./components/ProjectsPage.vue";
 import SkillsPage from "./components/SkillsPage.vue";
 import SocialButtons from "./components/SocialButtons.vue";
 import WelcomeContainer from "./components/WelcomeContainer.vue";
-import BottomFooter from './store/BottomFooter.vue';
+
 
 export default {
   components: {
     WelcomeContainer,
     SocialButtons,
     // MobileMenu,
-    NavMenu,
+
     ProjectsPage,
     SkillsPage,
     ContactPage,
-    BottomFooter,
+    PageFooter    
+
   },
   data() {
-    return {
+return {
       isMenuOpen: false,
     };
   },
@@ -112,7 +114,7 @@ html {
   scroll-behavior: smooth;
 }
 header {
-    background: #7599C088;
+    background: #7599C0ee;
     position: fixed;
     right: 0px;
     top: 0px;
@@ -123,7 +125,7 @@ header {
   }
 @media screen and (min-width: 700px) {
   header {
-    background: #7599C088;
+    background: #7599C0ee;
     position: fixed;
     right: 0px;
     top: 0px;

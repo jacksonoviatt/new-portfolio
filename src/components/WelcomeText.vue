@@ -48,7 +48,7 @@
   <div id="forage">
     <img src="../assets/berries.png" alt="a berry logo">
     <div></div>
-    <img src="../assets/mushroom.png" alt="">
+    <img src="../assets/mushroom.png" alt="a mushroom logo">
   </div>
 
   </div>

@@ -122,7 +122,7 @@ export default new Vuex.Store({
         description: "A twitter clone. The first objective was to interact with a CRUD API and overcome the challenges that come with building a component based webiste. The next objective was to build my own database to interact with and a CRUD API using Python/Flask that I then integrated with the existing front end.",
         links: ["https://github.com/jacksonoviatt/tweeter",
         "https://tweeterburb.ml/#/welcome", "https://github.com/jacksonoviatt/tweeter_back_end"],
-        image: require("../assets/tweeter.jpg")
+        image: require("../assets/tweeter.png")
       },
       {
         name: "Radioactive Kaiju battle",

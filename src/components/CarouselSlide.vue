@@ -15,15 +15,15 @@
       <div>
         <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
         <div class="links" v-if="links[2] == null">
-          <a :href="links[1]">Go to site</a>
-          <a :href="links[0]">View code</a>
+          <a :href="links[1]" target="_blank">Go to site</a>
+          <a :href="links[0]" target="_blank">View code</a>
         </div>
         <div class="linksb" v-if="links[2] != null">
           <div>
-            <a :href="links[1]">Go to site</a>
-            <a :href="links[0]">Front-end code</a>
+            <a :href="links[1]" target="_blank">Go to site</a>
+            <a :href="links[0]" target="_blank">Front-end code</a>
           </div>
-          <a :href="links[3]">Back-end code</a>
+          <a :href="links[3]" target="_blank">Back-end code</a>
         </div>
       </div>
       <div class="desktopFormat">
