@@ -3,11 +3,12 @@
     <h2>My Skills</h2>
     <div class="line"></div>
     <div id="skills" v-for="object in storeSkills" :key="object.id">
-      <h2>{{ object.name }}</h2> 
+      <h2>{{ object.name }}</h2>
       <div class="skillType">
-         
         <div v-for="object in object.tech" :key="object.id" class="skill">
-          <img class="skillLogo" :src="object.logo" alt="" />
+          <div class="skillBox">
+            <img class="skillLogo" :src="object.logo" alt="" />
+          </div>
           <p>{{ object.name }}</p>
         </div>
       </div>
@@ -35,11 +36,22 @@ export default {
   margin: 30px;
   width: 70%;
 }
-.skillLogo {
+.skillBox {
   width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+} 
+ p {
+    text-align: center;
+    margin-top: 10px;
+    // width: 60px;
+    height: 60px;
+  }
+.skillLogo {
+  width: 100%;
 }
 .skillType {
-  
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -50,15 +62,12 @@ export default {
 }
 
 .skill {
-    margin: 5px;
-    display: grid;
-    place-items: center;
-    p {
-        text-align: center;
-        margin-top: 10px;
-        width: 100px;
-    }
+  margin: 5px;
+  display: grid;
+  place-items: center;
+  
 }
+
 @media screen and (min-width: 500px) {
   .skillType {
     grid-template-columns: 1fr 1fr 1fr;

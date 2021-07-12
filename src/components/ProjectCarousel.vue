@@ -6,8 +6,7 @@
             :name="object.name"
           :languages="object.languages"
           :description="object.description"
-          :codeLink="object.codeLink"
-          :liveLink="object.liveLink"
+          :links="object.links"
           :image="object.image"
         ></carousel-slide>
     </div>
@@ -34,23 +33,12 @@ export default {
 #projectCarousel {
   display: grid;
   place-items: center;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // white-space: nowrap;
-
+ 
 }
 .carousel {
-  // place-items: center;
+
   display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // width: 400px;
+
 }
-// @media screen and (min-width: 750px) {
-//   #projectCarousel {
-//   width: 300vw;
-//   overflow-x: auto;
-//   overflow-y: hidden;
-//   grid-template-columns: 1fr 1fr 1fr;
-  
-//   }
-// }
+
 </style>

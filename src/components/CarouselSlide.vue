@@ -14,15 +14,25 @@
     <div v-if="slideOpen === true" class="slideInfo">
       <div>
         <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
-        <!-- <div></div> -->
-        <div class="links">
-          <a :href="liveLink">Go to site</a> |
-          <a :href="codeLink">View code</a>
+        <div class="links" v-if="links[2] == null">
+          <a :href="links[1]">Go to site</a>
+          <a :href="links[0]">View code</a>
+        </div>
+        <div class="linksb" v-if="links[2] != null">
+          <div>
+            <a :href="links[1]">Go to site</a>
+            <a :href="links[0]">Front-end code</a>
+          </div>
+          <a :href="links[3]">Back-end code</a>
         </div>
       </div>
       <div class="desktopFormat">
         <div class="langDes">
-          <p>{{ languages }}</p>
+          <div class="lang">
+            <p v-for="string in languages" :key="string">
+              {{ string }}
+            </p>
+          </div>
           <p>{{ description }}</p>
         </div>
       </div>
@@ -50,10 +60,9 @@ export default {
   },
   props: {
     name: String,
-    languages: String,
+    languages: Array,
     description: String,
-    codeLink: String,
-    liveLink: String,
+    links: Array,
     image: String,
   },
 };
@@ -68,7 +77,8 @@ h3 {
 }
 .projectSlide {
   display: grid;
-  margin-bottom: 20px;
+  margin: 0 30px 20px;
+  // margin-bottom: 20px;
 }
 .desktopFormat {
   display: grid;
@@ -99,13 +109,43 @@ h3 {
     place-items: center;
     display: grid;
     margin: 8px 0px;
-    width: 50vw;
+    // width: 50vw;
     p {
       margin: 5px;
     }
   }
+  .lang {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 8px;
+  }
   .links {
     margin: 8px 0px;
+    display: grid;
+    place-items: center;
+
+    grid-template-columns: 1fr 1fr;
+    a {
+      text-decoration: underline;
+    }
+    text-align: center;
+  }
+  .linksb {
+    display: grid;
+    place-items: center;
+    margin: 8px 0px;
+    grid-template-columns: 1fr;
+    div {
+      display: grid;
+      place-items: center;
+
+      grid-template-columns: 1fr 1fr;
+
+      text-align: center;
+    }
+    a {
+      text-decoration: underline;
+    }
   }
 }
 @media screen and (min-width: 900px) {
@@ -120,9 +160,7 @@ h3 {
       display: grid;
       place-items: center;
     }
-    .langDes {
-      width: 30vw;
-    }
+
     img {
       box-shadow: grey 0px 4px 10px;
       margin-bottom: 10px;

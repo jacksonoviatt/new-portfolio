@@ -23,16 +23,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#welcome {
+  display: grid;
+  place-items: center;
+}
 .helloImgs {
   display: grid;
   place-items: center;
+  background: #EFEFD2;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
   // grid-template-columns: 1fr 1fr 1fr;
   // height: 100px;
   // width: 29px;
 
 
   img {
-    width: 160px;
+    height: 140px;
+    margin-right: -6px;
     // position: absolute;
   // transform: sc;
   //   width: 30%;

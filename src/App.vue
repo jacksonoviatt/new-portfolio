@@ -35,6 +35,7 @@
     <projects-page id="projects-page"></projects-page>
     <skills-page id="skills-page"></skills-page>
     <contact-page id="contact-page"></contact-page>
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 <script>
@@ -45,6 +46,7 @@ import ProjectsPage from "./components/ProjectsPage.vue";
 import SkillsPage from "./components/SkillsPage.vue";
 import SocialButtons from "./components/SocialButtons.vue";
 import WelcomeContainer from "./components/WelcomeContainer.vue";
+import BottomFooter from './store/BottomFooter.vue';
 
 export default {
   components: {
@@ -55,6 +57,7 @@ export default {
     ProjectsPage,
     SkillsPage,
     ContactPage,
+    BottomFooter,
   },
   data() {
     return {
