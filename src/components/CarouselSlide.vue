@@ -71,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 h3 {
   font-weight: 300;
+  cursor: pointer;
 }
 .remove {
   margin-left: 10px;
