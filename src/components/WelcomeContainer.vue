@@ -1,7 +1,7 @@
 <template>
   <div id="welcome">
     <div class="hello">
-      <h2>Hello! I'm Ramona Oviatt</h2>
+      <h2>Hello! <br>I'm Ramona Oviatt</h2>
       <div class="helloImgs">
         <!-- <img src="../assets/duck.svg" alt="A cartoon cat" /> -->
         <img src="../assets/export.png" alt="A cartoon ramona" />
@@ -56,6 +56,12 @@ h2 {
   display: grid;
   place-items: center;
   margin-top: 110px;
+  
+  h2 {
+   
+    text-align: center;
+  }
+  
 }
 
 // @media screen and (min-width: 320px) {
@@ -85,6 +91,7 @@ h2 {
 // }
 
 @media screen and (min-width: 500px) {
+  
   #welcome {
     margin-top: 130px;
   }

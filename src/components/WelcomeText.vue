@@ -1,56 +1,65 @@
 <template>
   <div id="welcomeText">
-   <h3>
-      I’m a full stack web developer based out of Edmonton, Canada.
-    </h3>
-   <div id="paleo">
-    <img src="../assets/smilodon.png" alt="a smilodon icon">
-    <div></div>
-    <img src="../assets/mammoth.png" alt="a mammoth icon">
-  </div>
-     <img
+    <h3>I’m a full stack web developer based out of Edmonton, Canada.</h3>
+    <div id="paleo">
+      <img src="../assets/smilodon.png" alt="a smilodon icon" />
+      <div></div>
+      <img src="../assets/mammoth.png" alt="a mammoth icon" />
+    </div>
+    <img
       id="dev"
       src="../assets/dev.png"
       alt="an icon of a desktop monitor with a browser"
     />
-    
+
     <p id="par1">
       <img src="../assets/cat.png" alt="a line art cat on a blob" />
 
-      I am always eager to learn more and engage with others as I expand my
-      abilities. My dad is a web developer and raised me around code and tech,
-      so I am thrilled to be joining him in the industry.
+      After completing my full stack development diploma at Innotech College I
+      began working full time as a front end web developer for a major Canadian
+      retail Shopify ecommerce store. I am always eager to learn more and engage
+      with others as I expand my abilities. My dad is a web developer and raised
+      me around code and tech, so I am thrilled to be joining him in the
+      industry.
     </p>
-    <div class="lineb"><div></div> <img id="tuco" src="../assets/tuco.svg" alt="a cartoon dog" /></div>
-   
+    <div class="lineb">
+      <div></div>
+      <img id="tuco" src="../assets/tuco.svg" alt="a cartoon dog" />
+    </div>
+
     <p id="par2">
       I love creating beautiful front-end work with a special eye towards
       aesthetic and visual design. I pride myself on the ability to fine-tune my
       work down to the last pixel and always try to exceed expectations.
     </p>
-    <div class="lineb"><div></div><img id="duck" src="../assets/duck.svg" alt="a cartoon cat" /></div>
-    
+    <div class="lineb">
+      <div></div>
+      <img id="duck" src="../assets/duck.svg" alt="a cartoon cat" />
+    </div>
+
     <p id="par3">
       I am logically minded and I love diving into new situations, concepts, and
-      projects with both feet. Creating a stable back-end is a cruical part of
-      most web apps and using pattern based logic I am able to acheice this,
-      by using my problem solving abilities to push through challenges that
-      come up along the way.
+      projects with both feet. Beginning my career in this exciting and fast
+      paced field has brought forth many interesting challenges that I have
+      loved finding solutions to. I have come to learn that very little is
+      impossible when you are passionate about the work you do.
     </p>
     <div class="lineb"><div></div></div>
-    <img id="techpets" src="../assets/techpets.jpeg" alt="Duck and tuco, my pets, in front of a computer">
+    <img
+      id="techpets"
+      src="../assets/techpets.jpeg"
+      alt="Duck and tuco, my pets, in front of a computer"
+    />
     <p id="par4">
-      I currently live with my partner Harley, my rescue dog Tuco, and my
-      one-eared cat Duck. When I am not developing, I can be found studying
-      paleontology and natural history, or out foraging for edible plants and
-      mushrooms in the woods.
+      I spend my days caring for my rescue dog Tuco, and my one-eared cat Duck.
+      When I am not developing, I can be found studying paleontology and natural
+      history, or out foraging for edible plants and mushrooms in the woods.
     </p>
-  <div id="forage">
-    <img src="../assets/berries.png" alt="a berry logo">
-    <div></div>
-    <img src="../assets/mushroom.png" alt="a mushroom logo">
-  </div>
-
+    <div id="forage">
+      <img src="../assets/berries.png" alt="a berry logo" />
+      <div></div>
+      <img src="../assets/mushroom.png" alt="a mushroom logo" />
+    </div>
   </div>
 </template>
 
@@ -104,7 +113,8 @@ div {
   display: grid;
   place-items: center;
   // margin: 20px 15% 0;
-  p,h3 {
+  p,
+  h3 {
     margin: 25px 0 25px;
 
     line-height: 25px;
@@ -139,26 +149,37 @@ div {
   margin-left: 55vw;
 }
 @media screen and (max-width: 400px) {
-#tuco {
-  margin-top: 50px;
-  width: 60px;
-  margin-right: 60vw;
-}
-#duck {
-  margin-top: 70px;
-  width: 65px;
-  margin-left: 70vw;
-}
-#paleo {
-  display: grid;
-  grid-template-columns: 1fr 60vw 1fr;
-  margin-top: -200px;
-  img {
-    width: 40px;
+  #tuco {
+    margin-top: 50px;
+    width: 60px;
+    margin-right: 60vw;
+  }
+  #duck {
+    margin-top: 70px;
+    width: 65px;
+    margin-left: 70vw;
+  }
+  #paleo {
+    display: grid;
+    grid-template-columns: 1fr 60vw 1fr;
+    margin-top: -200px;
+    img {
+      width: 40px;
+    }
   }
 }
-}
+@media screen and (max-width: 400px) {
+  #par1 {
+    padding: 0 40px;
+  }
+  #par2 {
+    padding-right: 40px;
+  }
 
+  #par3 {
+    padding-left: 40px;
+  }
+}
 @media screen and (min-width: 600px) {
   #dev {
     width: 60%;
@@ -177,7 +198,7 @@ div {
       width: 100px;
     }
   }
-  #paleo  {
+  #paleo {
     img {
       width: 80px;
     }
@@ -210,7 +231,4 @@ div {
     padding-right: 10px;
   }
 }
-
-
-
 </style>

@@ -47,7 +47,7 @@ export default {
     text-align: center;
     margin-top: 10px;
     // width: 60px;
-    height: 60px;
+    // height: 60px;
   }
 .skillLogo {
   width: 100%;
@@ -66,6 +66,7 @@ export default {
   margin: 5px;
   display: grid;
   place-items: center;
+  padding: 20px 0px;
   
 }
 

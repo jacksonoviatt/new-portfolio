@@ -1,17 +1,21 @@
 <template>
   <div class="projectSlide">
-    <div class="opener" @click="openSlide()">
+    <div class="opener" >
+      <!-- @click="openSlide()" -->
       <h3>
         {{ name }}
-        <img v-if="slideOpen === false" src="../assets/plus.png" alt="" /><img
+        <!-- <img v-if="slideOpen === false" src="../assets/plus.png" alt="" /> -->
+        <img
           class="remove"
-          v-if="slideOpen === true"
+          
           src="../assets/remove.png"
           alt=""
         />
+        <!-- v-if="slideOpen === true" -->
       </h3>
     </div>
-    <div v-if="slideOpen === true" class="slideInfo">
+    <div  class="slideInfo">
+      <!-- v-if="slideOpen === true" -->
       <div>
         <img class="projectImg" :src="imageSrc" :alt="imgAlt" />
         <div class="links" v-if="links[2] == null">
@@ -47,16 +51,16 @@ export default {
     return {
       imgAlt: `a screen grab from ${this.name}`,
       imageSrc: this.image,
-      slideOpen: false,
+      // slideOpen: false,
     };
   },
   methods: {
     check() {
       console.log(this.image);
     },
-    openSlide() {
-      this.slideOpen = !this.slideOpen;
-    },
+    // openSlide() {
+    //   this.slideOpen = !this.slideOpen;
+    // },
   },
   props: {
     name: String,
@@ -97,19 +101,24 @@ h3 {
 .slideInfo {
   display: grid;
   place-items: center;
-  box-shadow: #00000044 0px 15px 32px;
+  box-shadow: #00000044 0px 5px 20px;
   padding: 10px;
-  img {
-    // box-shadow: grey 0px 4px 10px;
-    margin-bottom: 10px;
-    transition: 0.5s ease-in all;
-    width: 60vw;
+  div {
+    display: grid;
+    place-items: center;
+    img {
+      // box-shadow: grey 0px 4px 10px;
+      margin-bottom: 10px;
+      transition: 0.5s ease-in all;
+      width: 80%;
+    }
   }
 
   .langDes {
     place-items: center;
     display: grid;
     margin: 8px 0px;
+    text-align: center;
     // width: 50vw;
     p {
       margin: 5px;
@@ -117,7 +126,7 @@ h3 {
   }
   .lang {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 8px;
   }
   .links {
@@ -146,6 +155,13 @@ h3 {
     }
     a {
       text-decoration: underline;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .slideInfo {
+    .lang {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

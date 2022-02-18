@@ -199,7 +199,7 @@ header {
       padding: 30px 0px 10px;
       width: 100px;
       height: 200px;
-      background: #b0c5db;
+      background: #7599C0;
       position: fixed;
       right: 0;
       top: -300px;
@@ -243,7 +243,7 @@ header {
       width: 100%;
       // }
       // div:hover {
-      background: #b0c5db;
+      background: #7599C0;
     }
   }
 }
